@@ -7,6 +7,7 @@ Design and Develop APIs for a Quiz application. Below contract you need to follo
 ## **Fetch a Quiz info**
 
 Get the quiz information for the given ID
+
 *GET* /api/quiz/:quizId
 
 Response Code 200 : Expected response should be of the form
@@ -28,6 +29,7 @@ Response Code 404 (failure) : Expected response should be of the form:
 ## **Create a Quiz**
 
 Add a quiz entry to the platform
+
 *POST* /api/quiz/
 
 The expected request should be of the form
@@ -61,6 +63,7 @@ Response Code 400 (failure) : Expected response should be of the form:
 ## **Delete a Quiz**
 
 Delete a quiz entry from the platform
+
 *DELETE* /api/quiz/:quizId
 
 
@@ -79,6 +82,7 @@ Response Code 404 (failure) : Expected response should be of the form:
 ## **Create a Question**
 
 Create a Question for the quiz
+
 *POST* /api/questions/
 
 The expected request should be of the form
@@ -119,6 +123,7 @@ Response code 400 (failure) : Expected response should be of the form:
 ## **Fetch a Question**
 
 Get the Question information
+
 *GET* /api/questions/:questionId
 
 Response Code 200 : Expected response should be of the form
