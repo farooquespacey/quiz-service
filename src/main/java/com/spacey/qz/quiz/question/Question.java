@@ -7,70 +7,31 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Getter @Setter
 	Long id;
+	@Getter @Setter
 	String name;
+	@Getter @Setter
 	String options;
 	@JsonProperty("correct_option")
+	@Getter @Setter
 	Integer correctOption;
+	@Getter @Setter
 	Integer points;
 	@JsonProperty("quiz_id")
+	@Getter @Setter
 	Long quizId;
 //	@ManyToOne(optional = false) // 'false' indicates this cannot live without its parent (Quiz)
 //	@JoinColumn(name = "quiz_id")
 //	Quiz quiz;
 	
-	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getOptions() {
-		return options;
-	}
-
-	public void setOptions(String options) {
-		this.options = options;
-	}
-
-	public Integer getCorrectOption() {
-		return correctOption;
-	}
-
-	public void setCorrectOption(Integer correctOption) {
-		this.correctOption = correctOption;
-	}
-
-	public Integer getPoints() {
-		return points;
-	}
-
-	public void setPoints(Integer points) {
-		this.points = points;
-	}
-
-	public Long getQuizId() {
-		return quizId;
-	}
-
-	public void setQuizId(Long quizId) {
-		this.quizId = quizId;
-	}
 
 	@Override
 	public String toString() {

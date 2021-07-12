@@ -30,7 +30,7 @@ public class QuestionController {
 
 	@PostMapping("/")
 	public Object createQues(@RequestBody Question ques) {
-		return quesService.createQuiz(ques);
+		return quesService.createQues(ques);
 	}
 
 	@ExceptionHandler(QuizNotFoundException.class) // (optional to list exceptions here) takes an exception or a

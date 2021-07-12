@@ -22,7 +22,7 @@ public class QuestionService {
 		else throw new QuestionNotFoundException("question does not exist");
 	}
 
-	public Question createQuiz(Question ques) {
+	public Question createQues(Question ques) {
 		if(ques.getName().isEmpty()) throw new IllegalNameException("name should not be empty!");
 		if(quizRepository.findOne(ques.getQuizId()) != null) {
 			return quesRepository.save(ques);			
