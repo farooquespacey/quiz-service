@@ -30,9 +30,4 @@ public class Quiz {
 	@JoinColumn(name = "quizId")
 	List<Question> questions;
 
-	@Override
-	public String toString() {
-		return "Quiz [id=" + id + ", name=" + name + ", description=" + description + "]";
-	}
-
 }

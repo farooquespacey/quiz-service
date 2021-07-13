@@ -28,15 +28,5 @@ public class Question {
 	@JsonProperty("quiz_id")
 	@Getter @Setter
 	Long quizId;
-//	@ManyToOne(optional = false) // 'false' indicates this cannot live without its parent (Quiz)
-//	@JoinColumn(name = "quiz_id")
-//	Quiz quiz;
 	
-
-	@Override
-	public String toString() {
-		return "Question [id=" + id + ", name=" + name + ", options=" + options + ", correctOption=" + correctOption
-				+ ", points=" + points + ", quizId=" + quizId + "]";
-	}
-
 }

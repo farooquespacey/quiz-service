@@ -28,9 +28,17 @@ public class QuizExceptionHandler {
 
 	@ExceptionHandler(EmptyResultDataAccessException.class)
 	@ResponseStatus(code = HttpStatus.NOT_FOUND)
-	public ResponseEntity<StatusResponse> handleEmptyResultDataAccessException(EmptyResultDataAccessException exception) {
+	public ResponseEntity<StatusResponse> handleEmptyResultDataAccessException(
+			EmptyResultDataAccessException exception) {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND)
 				.body(new StatusResponse("failure", "ERDAE: " + exception.getMessage()));
+	}
+
+	@ExceptionHandler(Exception.class)
+	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
+	public ResponseEntity<StatusResponse> handleGenericException(Exception exception) {
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+				.body(new StatusResponse("failure", "EXC: " + exception.getMessage()));
 	}
 
 }
